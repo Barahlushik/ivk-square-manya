@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SquareManya</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="container">
+    <h1>SquareManya</h1>
+
+    <section class="controls">
+        <label>Размер поля:
+            <input id="sizeInput" type="number" min="3" max="20" value="6" />
+        </label>
+
+        <label>Ваш цвет:
+            <select id="playerColor">
+                <option value="W">W (белый)</option>
+                <option value="B">B (чёрный)</option>
+            </select>
+        </label>
+
+        <label>Режим:
+            <select id="modeSelect">
+                <option value="u-vs-u">Игрок против игрока</option>
+                <option value="u-vs-c">Игрок против компьютера</option>
+                <option value="c-vs-c">Компьютер против компьютера</option>
+            </select>
+        </label>
+
+        <button id="newGameBtn">Новая игра</button>
+
+        <div id="status" class="status">Готово.</div>
+    </section>
+
+    <section class="board-wrap">
+        <div id="board" class="board"></div>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
