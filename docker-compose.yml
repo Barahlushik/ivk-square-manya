@@ -1,0 +1,22 @@
+services:
+  service:
+    build:
+      context: ./
+      dockerfile: service/Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - ivk-net
+
+  web-ui:
+    build:
+      context: ./web-ui
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    networks:
+      - ivk-net
+
+networks:
+  ivk-net:
+    driver: bridge
